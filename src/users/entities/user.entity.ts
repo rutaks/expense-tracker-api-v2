@@ -5,7 +5,6 @@ import {
   TableInheritance,
   OneToOne,
   JoinColumn,
-  OneToMany,
 } from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
 import { UserMobileInformation } from './user-mobile-information.entity';

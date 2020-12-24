@@ -25,6 +25,8 @@ import {
 import { Reset } from './entities/reset.entity';
 import { ResetPasswordMedium } from './enums/reset-password-medium.enum';
 import { canSendEmailOrSms } from '../shared/utils/environment.util';
+import { Consumer } from 'src/consumer/entities/consumer.entity';
+import { Admin } from 'src/admins/entities/admin.entity';
 
 /**
  * Represents the Authentication service layer
@@ -62,6 +64,33 @@ export class AuthService {
       where: { email },
       relations: ['user'],
     });
+
+    if (!(auth.user instanceof Admin)) {
+      throw new UnauthorizedException('User not found!');
+    }
+
+    return await this.authenticateUser(auth, password);
+  }
+
+  /**
+   * Authenticates an consumer by email & password
+   *
+   * @param EmailPasswordLoginDto - object representation of an login attempt
+   * @returns LoginResponseDto Instance of consumer with access token
+   * @throws UnauthorizedException email must be found and password match
+   */
+  async loginConsumer(
+    emailPasswordLoginDto: EmailPasswordLoginDto,
+  ): Promise<LoginResponseDto> {
+    const { email, password } = emailPasswordLoginDto;
+    const auth = await this.authRepository.findOne({
+      where: { email },
+      relations: ['user'],
+    });
+
+    if (!(auth.user instanceof Consumer)) {
+      throw new UnauthorizedException('User not found!');
+    }
 
     return await this.authenticateUser(auth, password);
   }

@@ -42,7 +42,7 @@ import { ResetPasswordMedium } from './enums/reset-password-medium.enum';
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post('admin/login')
+  @Post('login/admin')
   @ApiOkResponse({
     description: 'Admin authentication successful',
     type: LoginResponseDto,
@@ -57,6 +57,23 @@ export class AuthController {
   ): Promise<GenericResponse<LoginResponseDto>> {
     const results = await this.authService.loginAdmin(loginDto);
     return { message: 'Login Successful', results };
+  }
+
+  @Post('login/consumer')
+  @ApiOkResponse({
+    description: 'Consumer authentication successful',
+    type: LoginResponseDto,
+  })
+  @ApiUnauthorizedResponse({
+    description: 'Authentication failed',
+  })
+  @HttpCode(HttpStatus.OK)
+  @UsePipes(new ValidationPipe({ transform: true }))
+  async loginConsumer(
+    @Body() loginDto: EmailPasswordLoginDto,
+  ): Promise<GenericResponse<LoginResponseDto>> {
+    const results = await this.authService.loginConsumer(loginDto);
+    return { message: 'Consumer authentication successful', results };
   }
 
   @Post('password/reset')

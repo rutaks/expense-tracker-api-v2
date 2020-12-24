@@ -20,7 +20,7 @@ export const config = (): {
       __dirname + '/../**/*.entity.js',
       __dirname + '/../**/*.entity.ts',
     ],
-    dropSchema: process.env.NODE_ENV === 'development',
+    // dropSchema: process.env.NODE_ENV === 'development',
     synchronize: true,
     logging: true,
     autoLoadEntities: true,
