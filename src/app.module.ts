@@ -15,6 +15,7 @@ import { ClassTransformInterceptor } from './shared/interceptors/class-transform
 import { DatabaseConfig } from './shared/configs/database.config';
 import { UsersModule } from './users/users.module';
 import { ConsumerModule } from './consumer/consumer.module';
+import { FinancialRecordModule } from './financial-record/financial-record.module';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { ConsumerModule } from './consumer/consumer.module';
     AuthModule,
     UsersModule,
     ConsumerModule,
+    FinancialRecordModule,
   ],
   controllers: [AppController],
   providers: [

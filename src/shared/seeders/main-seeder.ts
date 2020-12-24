@@ -1,6 +1,7 @@
 /* istanbul ignore next */
 import 'dotenv/config';
 import AdminSeeder from './admin-seeders';
+import ConsumerSeeder from './consumer-seeders';
 
 /**
  * Class representing the seeder process. Will prefill database with dummy records
@@ -10,7 +11,8 @@ import AdminSeeder from './admin-seeders';
 class MainSeeder {
   static async runSeeders(): Promise<void> {
     try {
-      AdminSeeder.seedAdmin();
+      await AdminSeeder.seedAdmin();
+      await ConsumerSeeder.seedConsumer();
     } catch (error) {
       console.log(error);
     }
