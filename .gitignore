@@ -2,6 +2,8 @@
 /dist
 /node_modules
 
+coverage/
+
 # Logs
 logs
 *.log
@@ -32,3 +34,10 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+
+#Env variables
+.env
+
+#docker-compose file to run locally
+docker-compose.yml

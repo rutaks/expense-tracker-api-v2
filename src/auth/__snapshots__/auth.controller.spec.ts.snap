@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthController (e2e) Should test templete func 1`] = `
+"
+<!DOCTYPE html>
+    <html lang=\\"en\\">
+    
+    <head>
+      <link href=\\"https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap\\" rel=\\"stylesheet\\">
+      <title>Password reset</title>
+      <style>
+        body{
+          font-family: 'Montserrat', sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          height: 100vh;
+          margin: 0;
+          padding-top: 20vh;
+          box-sizing: border-box;
+          font-family: 'Nanum Gothic', sans-serif;
+          background: #f3f5f6;
+        }
+    
+        .box-container {
+          background: white;
+          padding: 5vh;
+          width: 80%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+    
+        .btn {
+          display: block;
+          padding: 11px;
+          border-radius: .2rem;
+          text-align: center;
+          text-decoration: none;
+        }
+    
+        .btn-primary {
+          background-color: #1e9999;
+        }
+        .text-primary{
+          color: #1e9999;
+        }
+    
+        .mt-5 {
+          margin-top: 5vh;
+        }
+    
+      </style>
+    </head>
+    <body>
+    
+  <div class=\\"container\\">
+    <div class=\\"box-container\\">
+        <h1>Password reset</h1>
+        <div>Hello kimenyi,<br><br>
+        We received a request to reset the password on your snap account. <br>
+        Click on the link below to complete the reset. <br><br>
+        </div>
+        <a style=\\"color: white\\" class=\\"btn btn-primary mt-5\\" href=link target=\\"_blank\\">Reset password</a>
+        <br>Can't see the button ? Use
+        <a href=link class=\\"text-primary\\" target=\\"_blank\\">this link</a>
+        <br><br>
+        Thanks for helping us keep your account secure.<br><br>
+        Learn more about us <a href=\\"https://google.rw\\" class=\\"text-primary\\" target=\\"_blank\\">here</a>
+    </div>
+  </div>
+  
+        </body>
+    </html>
+    
+"
+`;
+
+exports[`AuthController (e2e) Should test templete func 2`] = `
+"
+<!DOCTYPE html>
+    <html lang=\\"en\\">
+    
+    <head>
+      <link href=\\"https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap\\" rel=\\"stylesheet\\">
+      <title>Password reset</title>
+      <style>
+        body{
+          font-family: 'Montserrat', sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          height: 100vh;
+          margin: 0;
+          padding-top: 20vh;
+          box-sizing: border-box;
+          font-family: 'Nanum Gothic', sans-serif;
+          background: #f3f5f6;
+        }
+    
+        .box-container {
+          background: white;
+          padding: 5vh;
+          width: 80%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+    
+        .btn {
+          display: block;
+          padding: 11px;
+          border-radius: .2rem;
+          text-align: center;
+          text-decoration: none;
+        }
+    
+        .btn-primary {
+          background-color: #1e9999;
+        }
+        .text-primary{
+          color: #1e9999;
+        }
+    
+        .mt-5 {
+          margin-top: 5vh;
+        }
+    
+      </style>
+    </head>
+    <body>
+    
+  <div class=\\"container\\">
+    <div class=\\"box-container\\">
+        <h1>Password reset</h1>
+        <div>Hello kimenyi,<br><br>
+        We received a request to reset the password on your snap account. <br>
+        Click on the link below to complete the reset. <br><br>
+        </div>
+        <a style=\\"color: white\\" class=\\"btn btn-primary mt-5\\" href=link target=\\"_blank\\">Reset password</a>
+        <br>Can't see the button ? Use
+        <a href=link class=\\"text-primary\\" target=\\"_blank\\">this link</a>
+        <br><br>
+        Thanks for helping us keep your account secure.<br><br>
+        Learn more about us <a href=\\"https://google.rw\\" class=\\"text-primary\\" target=\\"_blank\\">here</a>
+    </div>
+  </div>
+  
+        </body>
+    </html>
+    
+"
+`;
