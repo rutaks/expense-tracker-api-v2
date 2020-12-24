@@ -44,5 +44,6 @@ import { Reset } from './entities/reset.entity';
       useClass: TokenExistsGuard,
     },
   ],
+  exports: [AuthService],
 })
 export class AuthModule {}

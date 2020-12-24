@@ -14,6 +14,7 @@ import { ResponseTransformInterceptor } from './shared/interceptors/response-tra
 import { ClassTransformInterceptor } from './shared/interceptors/class-transform.interceptor';
 import { DatabaseConfig } from './shared/configs/database.config';
 import { UsersModule } from './users/users.module';
+import { ConsumerModule } from './consumer/consumer.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { UsersModule } from './users/users.module';
     }),
     AuthModule,
     UsersModule,
+    ConsumerModule,
   ],
   controllers: [AppController],
   providers: [
